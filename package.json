@@ -1,0 +1,35 @@
+{
+  "name": "luapack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "luapack": "./src/bin/bin.js"
+  },
+  "scripts": {
+    "start": "node ./src/luapack/luapack.js",
+    "test": "npm run test-raw | faucet",
+    "test-raw": "tape ./**/*.test.js ./**/**/*.test.js",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "precommit": "npm run lint && npm test",
+    "prepush": "npm run lint && npm test",
+    "coverage": "nyc npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "8.2.1",
+    "eslint": "4.15.0",
+    "faucet": "0.0.1",
+    "husky": "0.14.3",
+    "nyc": "11.4.1",
+    "sinon": "4.1.6",
+    "tape": "4.8.0"
+  },
+  "dependencies": {
+    "minimist": "1.2.0",
+    "ramda": "0.25.0"
+  }
+}
