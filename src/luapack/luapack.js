@@ -33,7 +33,7 @@ function luapack(inputFile) {
         return data
       })
       .then(processStringOnRequireMatches(sourceBasePath, srcDirName))
-      .then((matches) => {
+      .then(function replaceRequiresWithResolved(matches) {
         const currentProcessedModule = modules[modules.length - 1]
         currentProcessedModule.matches = matches
         currentProcessedModule.processedContent = (() => {
