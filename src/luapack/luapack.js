@@ -63,6 +63,7 @@ function luapack(inputFile) {
           name: i.moduleName,
           content: i.processedContent,
         })),
+        R.uniqBy(R.prop('moduleName')),
       )(modules)
     })
 }
