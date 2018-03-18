@@ -1,11 +1,23 @@
-# Luapack
+# NodeMCU-luapack
 
-A lua bundler. Bundles multiple lua files into one.
+A lua bundler for NodeMCU. Bundles multiple lua files into one.
+
+## Install
+
+```
+npm i -g nodemcu-luapack
+```
 
 ## Usage
 
 ```bash
-luapack init.lua
+nodemcu-luapack init.lua
+```
+
+## Tests
+
+```
+npm test
 ```
 
 ## License

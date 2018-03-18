@@ -1,10 +1,10 @@
 {
-  "name": "luapack",
+  "name": "nodemcu-luapack",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bundle lua scripts into one file",
   "main": "index.js",
   "bin": {
-    "luapack": "./src/bin/bin.js"
+    "nodemcu-luapack": "./src/bin/bin.js"
   },
   "scripts": {
     "start": "node ./src/luapack/luapack.js",
@@ -16,9 +16,13 @@
     "prepush": "npm run lint && npm test",
     "coverage": "nyc npm test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nodemcu",
+    "lua",
+    "bundle"
+  ],
+  "author": "Vitaly Ivanov",
+  "license": "MIT",
   "devDependencies": {
     "babel-eslint": "8.2.1",
     "eslint": "4.15.0",
